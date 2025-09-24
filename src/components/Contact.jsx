@@ -20,7 +20,8 @@ export default function Contact() {
 
       const response = await fetch(SHEET_URL, {
         method: "POST",
-        body
+        body,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
       });
 
       if (response.ok) {
